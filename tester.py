@@ -1,68 +1,68 @@
-# from textblob import TextBlob
-# import pytest
-# def extract_sentiment(text: str):
-#         '''Extract sentiment using textblob. 
-#         Polarity is within range [-1, 1]'''
+from textblob import TextBlob
+import pytest
+def extract_sentiment(text: str):
+        '''Extract sentiment using textblob. 
+        Polarity is within range [-1, 1]'''
 
-#         text = TextBlob(text)
+        text = TextBlob(text)
 
-#         return text.sentiment.polarity
-
-
-# def extract_sentiment(text: str):
-#         '''Extract sentiment using textblob. 
-#         Polarity is within range [-1, 1]'''
-
-#         text = TextBlob(text)
-
-#         return text.sentiment.polarity
-
-# def test_extract_sentiment():
-
-#     text = "I think this song is just a great song"
-
-#     sentiment = extract_sentiment(text)
-
-#     assert sentiment < 0
+        return text.sentiment.polarity
 
 
+def extract_sentiment(text: str):
+        '''Extract sentiment using textblob. 
+        Polarity is within range [-1, 1]'''
 
+        text = TextBlob(text)
 
-# def test_extract_sentiment_positive():
+        return text.sentiment.polarity
 
-#     text = "I think you will perform very best"
+def test_extract_sentiment():
 
-#     sentiment = extract_sentiment(text)
+    text = "I think this song is just a great song"
 
-#     assert sentiment > 0
+    sentiment = extract_sentiment(text)
 
-# def test_extract_sentiment_negative():
-
-#     text = "I hate you, you dissapoitned me"
-
-#     sentiment = extract_sentiment(text)
-
-#     assert sentiment > 0
+    assert sentiment < 0
 
 
 
-# def extract_sentiment(text: str):
-#         '''Extract sentiment using textblob. 
-#         Polarity is within range [-1, 1]'''
 
-#         text = TextBlob(text)
+def test_extract_sentiment_positive():
 
-#         return text.sentiment.polarity
+    text = "I think you will perform very best"
 
-# testdata = ["I think today will be a great day","I do not think this will turn out well"]
+    sentiment = extract_sentiment(text)
 
-# #list of examples
-# @pytest.mark.parametrize('sample', testdata) 
-# def test_extract_sentiment(sample):
+    assert sentiment > 0
 
-#     sentiment = extract_sentiment(sample)
+def test_extract_sentiment_negative():
 
-#     assert sentiment > 0
+    text = "I hate you, you dissapoitned me"
+
+    sentiment = extract_sentiment(text)
+
+    assert sentiment > 0
+
+
+
+def extract_sentiment(text: str):
+        '''Extract sentiment using textblob. 
+        Polarity is within range [-1, 1]'''
+
+        text = TextBlob(text)
+
+        return text.sentiment.polarity
+
+testdata = ["I think today will be a great day","I do not think this will turn out well"]
+
+#list of examples
+@pytest.mark.parametrize('sample', testdata) 
+def test_extract_sentiment(sample):
+
+    sentiment = extract_sentiment(sample)
+
+    assert sentiment > 0
 
 
 
